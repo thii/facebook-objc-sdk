@@ -28,9 +28,7 @@ Pod::Spec.new do |s|
   s.ios.weak_frameworks = 'Accounts', 'CoreLocation', 'Social', 'Security', 'QuartzCore', 'CoreGraphics', 'UIKit', 'Foundation', 'AudioToolbox'
   s.tvos.weak_frameworks = 'CoreLocation', 'Security', 'QuartzCore', 'CoreGraphics', 'UIKit', 'Foundation', 'AudioToolbox'
 
-  # This excludes `FBSDKCoreKit/FBSDKCoreKit/Internal_NoARC/` folder, as that folder includes only `no-arc` files.
-  s.requires_arc = ['FBSDKCoreKit/FBSDKCoreKit/*',
-                    'FBSDKCoreKit/FBSDKCoreKit/Internal/**/*']
+  s.requires_arc = true
 
   s.public_header_files = 'FBSDKCoreKit/FBSDKCoreKit/*.h'
   s.source_files = 'FBSDKCoreKit/FBSDKCoreKit/**/*.{h,m}'
